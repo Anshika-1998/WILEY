@@ -37,7 +37,7 @@ public class address {
 		this.zip = zip1;
 		// users.add(u);
 	}
-
+	
 	public String toString() {
 		return "\ncity:"+city + " zip:" + zip + " USERS[ " + users+"]";
 	}

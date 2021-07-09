@@ -22,4 +22,10 @@ public String string() {
 public String toString() {
 	return "id:"+id + " name:" + name + " "  ;
 }
+
+public int getzip(String s)
+{
+	return address.get(s);
+	
+}
 }

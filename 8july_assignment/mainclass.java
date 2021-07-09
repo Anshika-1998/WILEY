@@ -30,18 +30,11 @@ public static void main(String args[])
 	{
 		Set<String> key1=((user)u).address.keySet();
 		Collection<Integer> value=((user)u).address.values();
-		
-//		System.out.println(value);
-//		System.out.println(key1);
-		Iterator<Integer> itr=value.iterator();
 		for(String s:key1)
 		{
-			//System.out.println(s);
-			int val=itr.next();
+			int val=u.getzip(s);
 			for(address add:adress)
 			{
-				
-				//System.out.println(add);
 				if(add.getcity().equals(s))
 				{
 					check=true;
@@ -52,10 +45,6 @@ public static void main(String args[])
 			if(check==false)
 			{
 				adress.add(new address(s,val,u));
-				//add.setuser(u);
-				//System.out.println(adress);
-//				System.out.println(s);
-//				System.out.println(u);
 			}
 			check=false;
 		}
@@ -67,14 +56,11 @@ public static void main(String args[])
 			adress.remove(add);
 		}
 	}
-	//Collections.sort(adress);
 	System.out.println(adress);
 }
 }
 class sortuser implements Comparator<user>
 {
-	//Set<K> keySet()
-	
 	@Override
 	public int compare(user o1, user o2) {
 		// TODO Auto-generated method stub
@@ -102,8 +88,6 @@ class sortaddress implements Comparator<address>
 	@Override
 	public int compare(address o1, address o2) {
 		// TODO Auto-generated method stub
-		//return o1.getcity().compareTo(o2.getcity());
-		
 		return o1.getzip()-o2.getzip();
 	}
 	
