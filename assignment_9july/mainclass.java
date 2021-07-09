@@ -100,7 +100,11 @@ class comp implements Comparator<address>
 	@Override
 	public int compare(address o1, address o2) {
 		// TODO Auto-generated method stub
-		
+		int a=o1.getlistsize();
+		int b=o2.getlistsize();
+		if(a>b||b>a)
+			return b-a;
+		else
 		return o1.getzip()-o2.getzip();
 	}
 	
