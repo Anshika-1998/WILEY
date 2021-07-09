@@ -22,9 +22,9 @@ public static void main(String args[])
 	for(user u:users)
 	System.out.println(u.string());
 	
-	
-	Set<address> adress=new HashSet<address>();//(new sortaddress());
-	
+	int size;
+	//Set<address> adress=new HashSet<address>();//(new sortaddress());
+	List<address> adress=new ArrayList();
 	boolean check=false;
 	for(user u:users)
 	{
@@ -44,7 +44,9 @@ public static void main(String args[])
 			}
 			if(check==false)
 			{
-				adress.add(new address(s,val,u));
+				size=adress.size();
+				adress.add(size,new address(s,val,u));
+			
 			}
 			check=false;
 		}
