@@ -13,8 +13,10 @@ public class fibo {
 		addition disp=new addition(s.getIntegers());
 		Thread t2=new Thread(disp);
 		t2.start();
+		System.out.println("[");
 		for(int i=0;i<s.getIntegers().size()-2;i++)
 		System.out.println(disp.print(i));
+		System.out.println("]");
 	
 	}
 }
@@ -58,6 +60,6 @@ class series implements Runnable
 	public String print(int i) 
 	{
 		
-		return "\n"+sum.get(i) + " + " + list.get(i) + " = " +(sum.get(i) + list.get(i)) ;
+		return sum.get(i) + " + " + list.get(i) + " = " +(sum.get(i) + list.get(i)+",") ;
 	}
 }
